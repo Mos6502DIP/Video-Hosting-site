@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='media/favicon.ico')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+       </script>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Ocean Space - {% block page_name %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="banner">
+        <div class="ui menu">
+            {% if username != None %}
+
+
+                <div class="item">
+                    <div class="ui button"><a href="/upload" style="color: black">Upload</a></div>
+                </div>
+
+                <div class="right item">
+                    <div class="ui icon input">
+                        <input style="height: 35px;" type="text" placeholder="Search...">
+                        <i class="search icon"></i>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="ui primary button"><a href="/logout"  style="color: white">Log out</a></div>
+                </div>
+
+
+                <div class="item">
+                    <div class="ui button"><a href="/dashboard" style="color: black">{{ username }}</a></div>
+                </div>
+
+
+            {% else %}
+
+                <div class="item">
+                    <div class="ui button"><a href="/" style="color: black">Ocean zone</a></div>
+                </div>
+
+
+
+            {% endif %}
+
+        </div>
+
+
+
+
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
+
+</body>
+</html>

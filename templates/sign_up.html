@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block page_name %}Sign Up{% endblock %}
+
+{% block content %}
+   <div class="ui middle aligned center aligned grid">
+          <div class="column">
+            <h2 class="ui image header">
+              <div class="content">
+                Sign up to ocean zone
+              </div>
+            </h2>
+            <form method="POST" class="ui large form">
+              <div class="ui stacked secondary  segment">
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input type="text" name="Username" placeholder="username">
+                  </div>
+                </div>
+                  <div class="field">
+                  <div class="ui left icon input">
+                    <i class="envelope outline icon"></i>
+                    <input type="text" name="Email" placeholder="Email">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input type="password" name="Password" placeholder="Password">
+                  </div>
+                </div>
+                <button class="ui fluid large blue submit button" type="submit">Sign Up</button>
+
+              </div>
+
+            </form>
+
+            {% if response != "" %}
+                <div class="ui message">
+                        {{ response }}
+                </div>
+
+            {% endif %}
+
+
+            <div class="ui message">
+                Know how we use your data? <a href="/signup">Register</a>
+            </div>
+
+          </div>
+        </div>
+
+        
+{% endblock %}

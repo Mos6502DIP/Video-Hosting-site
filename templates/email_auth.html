@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_name %}Landing{% endblock %}
+
+{% block content %}
+    <div class="centered">
+
+        <h2>You have been a sent a email confirm your address with a code this expires in 1 minute</h2>
+        <form method="POST">
+            <label for="username">Code:</label><br>
+            <input type="text" id="code" name="code" required><br><br>
+        </form>
+        <br>
+
+    </div>
+{% endblock %}

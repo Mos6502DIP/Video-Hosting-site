@@ -1,0 +1,7 @@
+628 : the user has requested the page and the code does not exist (via Email verify)
+34 : The users browser's Joshua Cookie are invalid meaning that the account doesn't exist of the password has changed.
+Email sent! and no email has been sent: This means the account does not exist with that email.
+1998 : the user has requested the page and the code does not exist (via Password Reset)
+639 : the form has been posted with no files
+739 : the files have not been selected
+349 : file Already exsits

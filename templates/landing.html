@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block page_name %}Landing{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+        <div class="ui middle aligned center aligned grid">
+          <div class="column">
+            <h2 class="ui image header">
+              <div class="content">
+                Log-in to your account
+              </div>
+            </h2>
+            <form method="POST" class="ui large form">
+              <div class="ui stacked secondary  segment">
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input type="text" name="username" placeholder="username">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input type="password" name="password" placeholder="Password">
+                  </div>
+                </div>
+                <button class="ui fluid large blue submit button" type="submit">Sign In</button>
+
+              </div>
+
+            </form>
+
+            {% if response != "" %}
+                <div class="ui message">
+                        {{ response }}
+                </div>
+
+            {% endif %}
+
+
+            <div class="ui message">
+                New to us? <a href="/signup">Register</a> Or have you <a href="/forgot">forgot your password.</a>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+{% endblock %}
