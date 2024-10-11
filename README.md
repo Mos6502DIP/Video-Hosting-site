@@ -42,5 +42,5 @@ Follow the steps below to set up the project locally.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/video-hosting-project.git
-cd video-hosting-project
+git clone https://github.com/Mos6502DIP/Video-Hosting-site.git
+cd Video-Hosting-site
